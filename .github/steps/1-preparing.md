@@ -48,7 +48,7 @@ To get started, we will set up a GitHub Codespace with the necessary tools and e
    - ✅ Your copy: `/{{full_repo_name}}`
    - ❌ Original: `spec-ops-method/modernize-your-legacy-code-with-github-copilot`
 
-1. Wait a moment for Visual Studio Code to load in your browser (note - this could take a few minutes).
+1. Wait a moment for Visual Studio Code to load in your browser (note - this could take a few minutes). Once done, the README.md file might be open - you can go ahead and close this file.
 
 1. In the left sidebar, click the extensions tab and verify that the `GitHub Copilot` and `Cobol` extensions are installed and enabled.
 
