@@ -1,32 +1,41 @@
-## Step 4: Convert the legacy COBOL code to Node.js
+## Step 4: Implement the Modern Application from the Specification
 
-Perfect! Now that we've generated the data flow diagram and prepared our comprehensive test plan, we have all the context we need to leverage GitHub Copilot for the actual code transformation from COBOL to Node.js.
+Perfect! Now that we've generated a comprehensive software specification and prepared our test plan, we have everything we need to implement a modern Node.js application.
 
-The data flow diagram helps us understand how data moves through the system, while the test plan ensures we maintain the same functionality during modernization. With this foundation, GitHub Copilot can intelligently convert our legacy code while preserving business logic.
+> [!IMPORTANT]
+> **Specification-Driven Implementation**
+>
+> Notice that we are **not** asking Copilot to "translate" or "convert" the COBOL code. Instead, we're asking it to **implement the specification**. This is a key SpecOps principle: the specification is the source of truth, not the legacy code. The COBOL code was just a means to extract the specification—now we can discard it and build fresh from verified requirements.
 
-### ⌨️ Activity: Leverage Copilot to Transform COBOL to Node.js
+The specification captures what the system should do. The test plan ensures we validate the implementation. With this foundation, GitHub Copilot can generate a clean, modern implementation that faithfully implements the documented behavior.
 
-Let's use GitHub Copilot to do the heavy lifting of converting our COBOL application to modern Node.js. Copilot will use the existing codebase, data flow understanding to create a functionally equivalent Node.js application.
+### ⌨️ Activity: Implement the Specification in Node.js
+
+Let's use GitHub Copilot to implement our verified specification as a modern Node.js application. Rather than translating COBOL syntax, Copilot will read the specification and build a clean implementation from scratch.
 
 >[!NOTE]
 >It is still important to be specific and clear in your prompt to ensure Copilot does exactly what you need!
 
 1. Open your Copilot Chat window and make sure you are using **Agent Mode**.
-1. Provide the following prompt to Copilot to start the conversion process:
+1. Add the specification file as context: Click **Add Context...**, select **Files & Folders**, then select `docs/SPECIFICATION.md`.
+1. Provide the following prompt to Copilot to implement the specification:
 
     > ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=social&logo=github%20copilot)
     >
     > ```prompt
-    > #codebase convert the three separate COBOL legacy files into a single Node.js src/accounting/index.js accounting application.
+    > Using the software specification in docs/SPECIFICATION.md as the authoritative source of truth, implement a Node.js application in src/accounting/index.js.
     >
-    > Leverage the data flow diagram of the existing COBOL application available in the repository to preserve:
-    > - the original business logic
-    > - data integrity
-    > - menu options of the original application.
+    > The implementation must:
+    > - Implement ALL business rules documented in the specification
+    > - Follow the data structures and constraints defined in the specification
+    > - Reproduce the user interface flow described in the specification
+    > - Handle all error conditions as specified
     >
-    > Change directory to src/accounting and install all prerequisites to run the Node.js application
+    > Do NOT reference or translate the COBOL code—implement purely from the specification.
     >
-    > Create a .vscode/launch.json file to run the Node.js application
+    > Change directory to src/accounting and install all prerequisites to run the Node.js application.
+    >
+    > Create a .vscode/launch.json file to run the Node.js application.
     > ```
 
 1. Ensure the Node.js application is created in the `src/accounting` directory and that you can run it from the `Run and Debug` sidebar in VS Code.
@@ -36,9 +45,9 @@ Let's use GitHub Copilot to do the heavy lifting of converting our COBOL applica
 
 ### ⌨️ Activity: Create Unit Tests Based on Our Test Plan
 
-Let's use the test plan we generated earlier as the blueprint for creating comprehensive unit tests. This ensures our modernized code behaves exactly like the original COBOL system.
+Let's use the test plan we generated earlier as the blueprint for creating comprehensive unit tests. This ensures our implementation faithfully follows the specification.
 
-Since we already have a detailed test plan in `docs/TESTPLAN.md`, GitHub Copilot can use that as context to create matching unit tests for our new Node.js implementation.
+Since we already have a detailed test plan in `docs/TESTPLAN.md` (derived from the specification), GitHub Copilot can use that as context to create matching unit tests for our new Node.js implementation.
 
 1. Open your Copilot Chat window and make sure you are using **Agent Mode**.
 1. Attach the `docs/TESTPLAN.md` file to the chat so Copilot can use it as context.

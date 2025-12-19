@@ -1,20 +1,32 @@
 ## Review
 
-_Congratulations! You've successfully modernized Mergington High School's legacy accounting system and brought it into the modern era!_
+_Congratulations! You've successfully modernized Mergington High School's legacy accounting system using SpecOps principles!_
 
 <img src="https://octodex.github.com/images/jetpacktocat.png" alt="celebrate" width=200 align=right>
 
 Here's a recap of your key accomplishments:
 
-- **Analyzed legacy COBOL code** using GitHub Copilot Chat to understand business logic
-- **Generated documentation** (Mermaid data flow diagrams and test plans) with Copilot
-- **Modernized the codebase** from COBOL to Node.js using Copilot's code transformation capabilities
-- **Created comprehensive unit tests** based on the generated test plan
+- **Generated a software specification** from legacy COBOL code using GitHub Copilot—capturing institutional knowledge in plain language
+- **Created a specification that domain experts could verify** before any modern code was written
+- **Developed a comprehensive test plan** derived from the specification (not the code)
+- **Implemented a modern Node.js application** from the verified specification—not by translating COBOL
+- **Validated the implementation** against the specification using comprehensive unit tests
 
-The school's administration is thrilled with the results! The new system is not only easier to maintain but provides better service to students, parents, and staff. The IT team can now quickly implement new features as school needs evolve, and the integration with other school systems has dramatically reduced administrative workload.
+### Why This Approach Matters
+
+By following [SpecOps methodology](https://spec-ops.ai), you've done more than just convert code:
+
+- **Preserved institutional knowledge**: The specification captures what the system does in a format that outlasts any particular technology
+- **Enabled domain expert verification**: Non-programmers can review and approve the specification
+- **Created a sustainable foundation**: Future changes can start with the specification, ensuring proper review before implementation
+- **Reduced risk**: The specification was verified before code was written, catching errors early
+
+The school's administration is thrilled with the results! The new system is not only easier to maintain but provides better service to students, parents, and staff. The IT team can now quickly implement new features as school needs evolve, and the specification serves as living documentation that guides all future development.
 
 ### What's next?
 
+- Learn more about [SpecOps methodology](https://spec-ops.ai) for legacy system modernization
+- Explore the [spec-kit toolkit](https://github.com/github/spec-kit) for specification-driven development with AI
 - Check out the other [GitHub Skills exercises](https://learn.github.com/skills).
   - Take [Customize your GitHub Copilot Experience](https://github.com/skills/customize-your-github-copilot-experience) exercise to learn about custom instructions, chat modes and prompt files _(like the runCobolApp you used in this exercise)_
   - Learn how to [Integrate MCP with Copilot](https://github.com/skills/integrate-mcp-with-copilot) to enable more context and tools for your Copilot experience.

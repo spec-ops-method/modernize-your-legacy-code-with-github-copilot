@@ -26,22 +26,27 @@ Because that is a common task, we have already set up a custom prompt file that 
    - The application will prompt you to select an option from the menu.
    - Try playing with the different options of the COBOL accounting app and when you are done select option `4` to exit.
 
-### ⌨️ Activity: Generate a test plan to validate the current implementation
+### ⌨️ Activity: Generate a test plan from the specification
 
-Given the features of our existing legacy accounting system we want to generate a comprehensive test plan that covers all critical functionalities and edge cases.
+Given the software specification we created in the previous step, we want to generate a comprehensive test plan that covers all critical functionalities and edge cases documented in the specification.
 
-We will use that test plan to create tests in the Node.js application later.
+We will use that test plan to validate both the specification (with domain experts) and the Node.js implementation later.
 
 1. Inside your Copilot Chat window, make sure you are still using **Agent Mode**.
+1. Add the specification as context: Click **Add Context...**, select **Files & Folders**, then select `docs/SPECIFICATION.md`.
 1. Provide Copilot the specific instructions and requirements for the test plan by typing or pasting the above prompt in the chat input box.
 
    > ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=social&logo=github%20copilot)
    >
    > ```prompt
-   > The current Cobol app has no tests.
-   > Can you please create a test plan of the current business logic and implementation that I can use to validate with business stakeholders.
+   > Using the software specification in docs/SPECIFICATION.md, create a comprehensive test plan that validates all documented behavior.
+   >
    > Store it in a file called docs/TESTPLAN.md.
-   > Later I would like to use this test plan to create unit and integration tests in a node.js app. I am in the middle of transforming the current Cobol app to a node.js app.
+   >
+   > The test plan should be derived from the specification's business rules and operations—NOT from reading the COBOL code directly.
+   >
+   > Later I would like to use this test plan to create unit and integration tests in a Node.js app that implements the specification.
+   >
    > The test plan should include the following headings:
    > 1. Test Case ID
    > 2. Test Case Description
@@ -52,8 +57,7 @@ We will use that test plan to create tests in the Node.js application later.
    > 7. Status (Pass/Fail)
    > 8. Comments
    >
-   > Please create the test plan in a markdown table format. The test plan should cover all the business logic in the current Cobol app.
-   >
+   > Please create the test plan in a markdown table format. The test plan should cover all business rules and operations documented in the specification.
    > ```
 
 1. Make sure you can preview the test plan in the `docs/TESTPLAN.md` file. If there are any issues, you can continue chatting with Copilot to refine the test plan until you are satisfied with the results.
