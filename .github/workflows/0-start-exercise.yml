@@ -20,8 +20,8 @@ jobs:
     name: Start Exercise
     uses: skills/exercise-toolkit/.github/workflows/start-exercise.yml@v0.7.0
     with:
-      exercise-title: "Modernize your legacy code with GitHub Copilot"
-      intro-message: "Learn how to use GitHub Copilot to modernize a legacy COBOL accounting system."
+      exercise-title: "Modernize your legacy code with GitHub Copilot (SpecOps Edition)"
+      intro-message: "Learn how to use GitHub Copilot to create a software specification from legacy COBOL code and implement a modern Node.js application from that specification."
 
   post_next_step_content:
     name: Post next step content

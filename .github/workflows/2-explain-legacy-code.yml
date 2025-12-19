@@ -59,33 +59,33 @@ jobs:
 
       # START: Check practical exercise
 
-      - name: Check for an explanation of data.cob
-        id: check-explanation-data-cob
+      - name: Check for System Overview section
+        id: check-system-overview
         continue-on-error: true
         uses: skills/action-keyphrase-checker@v1
         with:
-          text-file: docs/README.md
-          keyphrase: 'data.cob'
+          text-file: docs/SPECIFICATION.md
+          keyphrase: 'overview'
           minimum-occurrences: 1
           case-sensitive: false
 
-      - name: Check for an explanation of main.cob
-        id: check-explanation-main-cob
+      - name: Check for Business Rules section
+        id: check-business-rules
         continue-on-error: true
         uses: skills/action-keyphrase-checker@v1
         with:
-          text-file: docs/README.md
-          keyphrase: 'main.cob'
+          text-file: docs/SPECIFICATION.md
+          keyphrase: 'business rule'
           minimum-occurrences: 1
           case-sensitive: false
 
-      - name: Check for an explanation of operations.cob
-        id: check-explanation-operations-cob
+      - name: Check for Operations documentation
+        id: check-operations
         continue-on-error: true
         uses: skills/action-keyphrase-checker@v1
         with:
-          text-file: docs/README.md
-          keyphrase: 'operations.cob'
+          text-file: docs/SPECIFICATION.md
+          keyphrase: 'operation'
           minimum-occurrences: 1
           case-sensitive: false
 
@@ -94,7 +94,7 @@ jobs:
         continue-on-error: true
         uses: skills/action-keyphrase-checker@v1
         with:
-          text-file: docs/README.md
+          text-file: docs/SPECIFICATION.md
           keyphrase: 'mermaid'
           minimum-occurrences: 1
           case-sensitive: false
@@ -110,13 +110,13 @@ jobs:
           vars: |
             step_number: 2
             results_table:
-              - description: "Check README.md for an explanation of data.cob"
-                passed: ${{ steps.check-explanation-data-cob.outcome == 'success' }}
-              - description: "Check README.md for an explanation of main.cob"
-                passed: ${{ steps.check-explanation-main-cob.outcome == 'success' }}
-              - description: "Check README.md for an explanation of operations.cob"
-                passed: ${{ steps.check-explanation-operations-cob.outcome == 'success' }}
-              - description: "Check README.md for a mermaid diagram"
+              - description: "Check SPECIFICATION.md for a System Overview section"
+                passed: ${{ steps.check-system-overview.outcome == 'success' }}
+              - description: "Check SPECIFICATION.md for Business Rules documentation"
+                passed: ${{ steps.check-business-rules.outcome == 'success' }}
+              - description: "Check SPECIFICATION.md for Operations documentation"
+                passed: ${{ steps.check-operations.outcome == 'success' }}
+              - description: "Check SPECIFICATION.md for a mermaid diagram"
                 passed: ${{ steps.check-mermaid-diagram.outcome == 'success' }}
 
       # END: Check practical exercise

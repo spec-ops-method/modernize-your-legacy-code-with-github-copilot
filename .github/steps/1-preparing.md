@@ -46,9 +46,9 @@ To get started, we will set up a GitHub Codespace with the necessary tools and e
 1. Confirm the **Repository** field is your copy of the exercise, not the original, then click the green **Create Codespace** button.
 
    - ✅ Your copy: `/{{full_repo_name}}`
-   - ❌ Original: `/skills/modernize-your-legacy-code-with-github-copilot`
+   - ❌ Original: `spec-ops-method/modernize-your-legacy-code-with-github-copilot`
 
-1. Wait a moment for Visual Studio Code to load in your browser.
+1. Wait a moment for Visual Studio Code to load in your browser (note - this could take a few minutes).
 
 1. In the left sidebar, click the extensions tab and verify that the `GitHub Copilot` and `Cobol` extensions are installed and enabled.
 
