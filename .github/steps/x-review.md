@@ -37,3 +37,25 @@ Check out these resources to learn more about GitHub Copilot :
 
 - Read the blog that this Skills exercise is based on: [Modernizing legacy code with GitHub Copilot: Tips and examples](https://github.blog/ai-and-ml/github-copilot/modernizing-legacy-code-with-github-copilot-tips-and-examples/)
 - Are you not getting the responses you want from Copilot? [Learn prompt engineering](https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/prompt-engineering-for-copilot-chat)
+
+---
+
+### 🧪 Bonus Activity: See SpecOps in Action
+
+Your repository includes the [SpecOps GitHub Action](https://github.com/spec-ops-method/spec-ops-action), which automatically creates issues when the specification changes. Let's see it work!
+
+1. Open the `docs/SPECIFICATION.md` file in your repository.
+
+2. Make a small change to the specification. For example, add a new business rule:
+   ```markdown
+   ### Requirement: Maximum Credit Limit
+   The system SHALL reject credit operations that would result in a balance exceeding $999,999.99.
+   ```
+
+3. Commit and push your change to the `main` branch.
+
+4. Navigate to the **Actions** tab in your repository and watch the "Create Issues for Specification Changes" workflow run.
+
+5. Once complete, check the **Issues** tab—you should see a new issue created automatically with the diff of your specification change!
+
+This demonstrates the SpecOps principle: **changes flow through specifications**. When business requirements change, the specification is updated first, and automation ensures the change is tracked and reviewed before implementation begins.
