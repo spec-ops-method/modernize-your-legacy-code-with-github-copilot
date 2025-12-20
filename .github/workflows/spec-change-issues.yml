@@ -2,8 +2,6 @@ name: Create Issues for Specification Changes
 
 on:
   push:
-    branches: [main, modernize-legacy-code]
-  pull_request:
     branches: [main]
 
 permissions:
