@@ -30,6 +30,7 @@ This repository includes standard SpecOps components that you can reuse in your 
 | Component | Description |
 |-----------|-------------|
 | [AGENTS.md](AGENTS.md) | Instructions for AI agents working on this codebase. Encodes the SpecOps methodology—specification-driven development where the spec is the source of truth. Configure this file to guide AI assistants in your own projects. |
+| [.github/skills/specops/SKILL.md](.github/skills/specops/SKILL.md) | Spec-driven development skill that teaches agents how to write specifications at the right level of detail, use spec file templates, and follow the spec-first workflow. Sourced from [JarvusInnovations/agent-skills](https://github.com/JarvusInnovations/agent-skills/blob/main/skills/specops/SKILL.md). |
 | [.github/instructions/cobol.instructions.md](.github/instructions/cobol.instructions.md) | COBOL comprehension instructions that automatically apply when Copilot analyzes `.cob` files. Helps AI understand COBOL structure and extract specifications in plain language. |
 | [.github/workflows/spec-change-issues.yml](.github/workflows/spec-change-issues.yml) | GitHub Actions workflow using the [SpecOps Action](https://github.com/spec-ops-method/spec-ops-action) to automatically create issues when specification files are modified. This ensures spec changes generate trackable work items for implementation review. |
 
